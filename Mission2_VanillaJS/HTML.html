@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Hasanah</title>
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+</head>    
+<body>
+    <div class="scene">
+        <div class="Bulan"></div>
+        <img src="sunset3.png"  class="sunset3">
+        <img src="awan1.png"  class="awan1">
+        <img src="awan2.png"  class="awan2">
+        <img src="awan3.png"  class="awan3">
+        <img src="awan1.png"  class="awan4">
+        <img src="awan2.png"  class="awan5">
+        <img src="awan3.png"  class="awan6">
+    </div>
+    <script type="text/javascript">
+        function bintang(){
+            let count = 500;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while(i < count){
+                let bintang = document.createElement("i");
+                let x = Math.floor(Math.random() * window.innerWidth)
+                let y = Math.floor(Math.random() * window.innerHeight)
+                let duration = Math.random() * 10;
+                let size = Math.random() * 2;
+
+                bintang.style.left = x+'px';
+                bintang.style.top = y+'px';
+                bintang.style.width = 1+size+'px';
+                bintang.style.height =  1+size+'px';
+
+                bintang.style.animationDuration = 5+duration+'s';
+                bintang.style.animationDelay = duration+'s';
+ 
+                scene.appendChild(bintang);
+                i++
+            }
+        }
+        bintang(); 
+
+    </script>
+</body>
+
+</html>
